@@ -32,3 +32,7 @@ def AzureTextAI():
                 print("Azure Computer Vision --> No 'PII' Data")
             else:
                 print(f"Azure Computer Vision Error --> {no_pii}") 
+                    
+                    
+                    
+AzureTextAI()   
