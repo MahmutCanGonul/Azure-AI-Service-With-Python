@@ -1,6 +1,7 @@
 def TranslateAI():
-    languages = ["English","Spanish","Franche","German","Turkish"]
-    keys = {languages[0]:"en",languages[1]:"es",languages[2]:"fr",languages[3]:"de",languages[4]:"tr"}
+    languages = ["English","Spanish","Franche","German","Turkish","Chinese","Japanese","Arabic","Hebrew","Russian","Portuguese"]
+    keys = {languages[0]:"en",languages[1]:"es",languages[2]:"fr",languages[3]:"de",
+            languages[4]:"tr",languages[5]:"zh-cn",languages[6]:"jp",languages[7]:"ar",languages[8]:"he",languages[9]:"ru",languages[10]:"pt"}
     target_lan = ""
     
     for i in range(len(languages)):
@@ -18,6 +19,19 @@ def TranslateAI():
          target_lan=keys[languages[int(choice)-1]]
     elif choice == "5":
          target_lan=keys[languages[int(choice)-1]]
+    elif choice == "6":
+         target_lan=keys[languages[int(choice)-1]]
+    elif choice == "7":
+         target_lan=keys[languages[int(choice)-1]]
+    elif choice == "8":
+         target_lan=keys[languages[int(choice)-1]]
+    elif choice == "9":
+         target_lan=keys[languages[int(choice)-1]]
+    elif choice == "10":
+         target_lan=keys[languages[int(choice)-1]]
+    elif choice == "11":
+         target_lan=keys[languages[int(choice)-1]]
+         
     else:
         return "Choice --> Not Correct"
     
@@ -37,6 +51,7 @@ def TranslateAI():
             response = requests.request("POST", url, data=payload, headers=headers, params=querystring)
             data = response.json()
             result = data[0]['translations']
+            print(f"json --> {result}")
             print(f"Result Sentence --> {result[0]['text']}")
         except Exception as ex:
             print(f"Error --> {ex}")
