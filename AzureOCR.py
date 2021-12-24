@@ -15,3 +15,6 @@ def AzureOCR():
         print(response.json())
     except Exception as ex:
         print(f"Azure Computer Vision Error --> {ex}")    
+
+        
+AzureOCR()
