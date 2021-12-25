@@ -29,7 +29,7 @@ def AzureBingSearch():
                url.append(value['url'])
                print("//////////////////////")
                print()
-           choice = input("Which do you want to search news? ")
+           choice = input("Which news do you want to search?")
            if choice.isdigit():
                ch = int(choice)
                for i in range(len(counts)):
