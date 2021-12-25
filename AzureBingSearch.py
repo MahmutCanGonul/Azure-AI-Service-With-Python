@@ -9,7 +9,7 @@ def AzureBingSearch():
            headers = {
     'x-bingapis-sdk': "true",
     'x-rapidapi-host': "bing-news-search1.p.rapidapi.com",
-    'x-rapidapi-key': "843406cdb2msh623e555d8416d8ep1d7e8ajsnb9afd7d794c4"
+    'x-rapidapi-key': "YOUR_RAPID_API_KEY"
     }
  
            response = requests.request("GET", url, headers=headers, params=querystring)
